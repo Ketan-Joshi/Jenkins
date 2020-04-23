@@ -1,5 +1,5 @@
 #!groovy
-library identifier: 'supreme-broccoli@ansicolor', retriever: modernSCM(
+library identifier: 'Jenkins@master', retriever: modernSCM(
         [$class: 'GitSCMSource',
          remote: 'https://github.com/Ketan-Joshi/Jenkins'])
 pipeline {
