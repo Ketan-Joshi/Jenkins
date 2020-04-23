@@ -6,7 +6,7 @@ def loadColors(){
 
 def info(message){
     loadColors()
-    sh """set +x;echo -e "${GREEN}[WARN] - ${message} ${NC}" """
+    sh """set +x;echo -e "${GREEN}[INFO] - ${message} ${NC}" """
 }
 
 def warn(message){
