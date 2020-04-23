@@ -1,7 +1,7 @@
 #!groovy
 library identifier: 'supreme-broccoli@ansicolor', retriever: modernSCM(
         [$class: 'GitSCMSource',
-         remote: 'https://github.com/shivanshthapliyal/supreme-broccoli'])
+         remote: 'https://github.com/Ketan-Joshi/Jenkins'])
 pipeline {
    agent any
     options{
@@ -15,7 +15,7 @@ pipeline {
                     sh ''' docker image ls
                     '''
                     myscript.info("Successfully Executed")
-                    def ret = sh(script: 'dooocker image ls', returnStatus: true)
+                    def ret = sh(script: 'docker image ls', returnStatus: true)
                     myscript.warning(ret)
              }
          }
