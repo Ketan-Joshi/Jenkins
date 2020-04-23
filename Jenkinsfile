@@ -10,7 +10,7 @@ pipeline {
 	stages {
 		stage( 'Coloured Output' ) {
 			steps{
-				scripts {
+				script {
 					logs.info "SUCCESS"
 					logs.warn "WARNING"
 					def gitId = sh(script: 'git rev-parse HEAD', returnStdout: true)
