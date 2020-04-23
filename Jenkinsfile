@@ -5,11 +5,11 @@ pipeline {
 	agent any
 	options{
 		timestamps()
-		ansiColor( 'xterm' )
+		ansiColor('xterm')
 	}
 	stages {
 		stage( 'Coloured Output' ) {
-			steps{
+			steps {
 				script {
 					logs.info "SUCCESS"
 					logs.warn "WARNING"
