@@ -14,7 +14,7 @@ def warn(message){
     sh """set +x;echo -e "${RED}[WARN] - ${message} ${NC}" """
 }
 
-def info(message){
+def gitCommitId(message){
     loadColors()
     sh """set +x;echo -e "${GREEN}[GIT COMMIT ID] - ${message} ${NC}" """
 }
