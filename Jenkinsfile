@@ -9,22 +9,13 @@ pipeline {
        ansiColor('xterm')
    }
    stages {
-      stage('List All Images') {
+      stage('Coloured Outputs') {
          steps {
              script{
-                    sh ''' docker image ls
-                    '''
-                    myscript.info("Successfully Executed")
-                    def ret = sh(script: 'docker image ls', returnStatus: true)
-                    myscript.warning(ret)
-             }
-         }
-      }
-      stage('Git Commit Id') {
-         steps {
-              script{
-		    def gitId=sh(script:'git rev-parse HEAD', returnStdout: true)
-                    myscript.gitCommitId(gitId)
+                    logs.info "SUCCESS"
+		    logs.warn "WARNING"
+		    def gitId=sh(script: 'git rev-parse HEAD' , returnStdout: true)
+		    logs.gitCommitId(gitId)	
              }
          }
       }

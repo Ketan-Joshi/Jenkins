@@ -1,12 +1,20 @@
-def info(message) {
-	echo  "\033[4;32mINFO:\033[0m \033[1;33m${message}\033[0m\n"
+def loadColors(){
+    RED='\033[0;31m'
+    GREEN='\033[0;32'
+    NC='\033[0m'
+
+def info(message){
+    loadColors()
+    sh """set +x;echo -e "${GREEN}[WARN] - ${message} ${NC}" """
 }
 
-def warning(message) {
-    echo "WARNING: \033[1;31;43m${message}\033[0m"
+def warn(message){
+    loadColors()
+    sh """set +x;echo -e "${RED}[WARN] - ${message} ${NC}" """
 }
 
-def gitCommitId(message)
-{
-      echo  "\033[4;32m[Git Commit ID] \033[0m \033[1;33m ${message} \033[0m\n"
+def info(message){
+    loadColors()
+    sh """set +x;echo -e "${GREEN}[GIT COMMIT ID] - ${message} ${NC}" """
 }
+
