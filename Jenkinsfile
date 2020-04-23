@@ -5,7 +5,7 @@ pipeline {
 	agent any
 	options{
 		timestamps()
-		ansicolor( 'xterm' )
+		ansiColor( 'xterm' )
 	}
 	stages {
 		stage( 'Coloured Output' ) {
